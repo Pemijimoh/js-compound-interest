@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <p>    
+        <p><b>Enter principal amount (P)</b></p>
+        <input type="number" id="p">
+        </p><hr>
+
+        <p>    
+            <p><b>Enter annual rate (r)</b></p>
+            <input type="number" id="r">
+            </p><hr>
+            
+            
+        <p>
+            <p><b>Enter number of years (t)</b></p>
+            <input type="number" id="t">
+            </p><hr>
+
+
+        <p>
+            <p><b>Enter number of times (n)</b></p>
+            <input type="number" id="n">
+            </p><hr>
+    
+
+
+        <p>
+            <button style=" font-family: 'Courier New', Courier, monospace;  color: darkmagenta;" onclick="calculate()">Calculate</button>
+        </p>
+
+
+
+        <p style=" font-size: larger ;  font-weight: bolder; color: darkmagenta;">
+            Compound Interest: <span id = "answer"></span>
+        </p>
+      
+
+        <script>
+            function calculate() {
+                var p = Number(document.getElementById("p").value);
+                var r = Number(document.getElementById("r").value);
+                var t = Number(document.getElementById("t").value);
+                var n = Number(document.getElementById("n").value);
+
+                var result = (p * Math.pow((1+ (r/(n*100))), (n*t)));
+                document.getElementById("answer").textContent= result;
+
+
+            }
+
+
+
+        </script>
+        
+
+
+
+
+
+
+
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
